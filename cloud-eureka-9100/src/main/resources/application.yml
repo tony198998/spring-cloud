@@ -1,6 +1,5 @@
 server:
-  port: 8100
-
+  port: 9100
 spring:
   application:
     name: eureka-center
@@ -15,15 +14,15 @@ eureka:
   instance:
     #注册中心地址
     hostname: 127.0.0.1
-
   ###客户端调用地址
   client:
     serviceUrl:
-      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:9100/eureka/
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:8100/eureka/
     ###是否将自己注册到Eureka服务中,集群的时候为true
     register-with-eureka: true
     fetch-registry: true
-
+  ###测试环境、开发环境可以关闭自我保护机制，保证服务不可用时及时剔除
   server:
     enable-self-preservation: false
+    eviction-interval-timer-in-ms: 2000
 
