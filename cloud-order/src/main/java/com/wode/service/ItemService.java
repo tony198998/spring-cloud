@@ -1,7 +1,9 @@
 package com.wode.service;
 
 import com.wode.entity.Item;
+import com.wode.properties.OrderProperties;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -12,8 +14,14 @@ public class ItemService {
     @Autowired
     private RestTemplate restTemplate;
 
+    @Value("${myspcloud.item.url}")
+    private String itemUrl;
+
+    @Autowired
+    OrderProperties orderProperties;
+
     public Item queryItemById(Long id) {
-        return this.restTemplate.getForObject("http://127.0.0.1:8081/item/"
+        return this.restTemplate.getForObject(orderProperties.getItem().getUrl()
                 + id, Item.class);
     }
 
