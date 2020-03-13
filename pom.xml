@@ -13,6 +13,7 @@
         <module>cloud-order</module>
         <module>cloud-eureka</module>
         <module>cloud-eureka-9100</module>
+        <module>cloud-zuul-gateway</module>
     </modules>
 
     <parent>
