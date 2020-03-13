@@ -14,6 +14,7 @@
         <module>cloud-eureka</module>
         <module>cloud-eureka-9100</module>
         <module>cloud-zuul-gateway</module>
+        <module>cloud-config-server</module>
     </modules>
 
     <parent>
