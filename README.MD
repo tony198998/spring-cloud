@@ -12,3 +12,5 @@ springCloud学习资料（其他资料比较繁琐，
 5、zuul：gateway服务网关（包括服务过滤器）
 6、config（服务端）  
 7、config的客户端在cloud-item工程中
+8、actuator 监控中心可以实现config配置数据的实时刷新  
+

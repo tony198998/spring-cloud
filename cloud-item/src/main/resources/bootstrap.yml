@@ -5,3 +5,6 @@ spring:
       uri: http://127.0.0.1:7788/  #配置中心的地址
       profile: dev #对应配置服务中的{profile}
       label: master #对应的分支
+      discovery:
+        enabled: true #启用发现服务功能
+        service-id: config-server #指定配置中心工程的名称
