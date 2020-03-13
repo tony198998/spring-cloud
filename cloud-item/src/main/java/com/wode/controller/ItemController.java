@@ -3,6 +3,8 @@ package com.wode.controller;
 import com.wode.config.JdbcConfigBean;
 import com.wode.entity.Item;
 import com.wode.service.ItemService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "/item")
 @Slf4j
+@Api("SwaggerDemo控制器")
 public class ItemController {
 
     @Autowired
@@ -36,4 +39,12 @@ public class ItemController {
     public String testconfig(){
         return this.jdbcConfigBean.toString();
     }
+
+
+    @ApiOperation("Swagger演示")
+    @GetMapping("/swaggerIndex")
+    public String swaggerIndex(String msg) {
+        return "This is swaggerIndex!" + msg;
+    }
+
 }
