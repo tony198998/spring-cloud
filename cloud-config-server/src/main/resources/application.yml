@@ -10,7 +10,7 @@ spring:
           uri: https://github.com/tony198998/spring-cloud.git
           search-paths: config-repo		#配置文件目录地址
           username: tony198998	#github账号（公有项目不需要设置）
-          password: ji6492194 	#github密码（公有项目不需要设置）
+          password: ****** 	#github密码（公有项目不需要设置）
           force-pull: true
       #label: master	#分支名称
 #    bus:
