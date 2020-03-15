@@ -11,7 +11,27 @@ spring:
           search-paths: config-repo		#配置文件目录地址
           username: tony198998	#github账号（公有项目不需要设置）
           password: ji6492194 	#github密码（公有项目不需要设置）
+          force-pull: true
       #label: master	#分支名称
+#    bus:
+#      trace:
+#        enabled: true
+#      enabled: true
+  rabbitmq: #RabbitMQ相关的配置
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
+#SpringCloud暴露接口，暴露/bus/refresh接口
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+
+
+
 
 ###服务注册到eureka注册中心的地址
 eureka:
