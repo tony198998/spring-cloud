@@ -21,5 +21,7 @@ springCloud学习资料（其他资料比较繁琐，
 9、网关的路由机制加入配置中心中，支持动态读取，可实时下发配置  
 10、Cloud Bus消息总线：基于mq的订阅发布，（实现了对RabbitMQ以及Kafka的支持），在config-server中添加  force-pull: true，  
 curl -X POST http://localhost:7788/actuator/bus-refresh，从配置中心拉取配置
-11、整合swagger ，登录页面：http://localhost:8081/swagger-ui.html
-
+11、整合swagger ，登录页面：http://localhost:8081/swagger-ui.html  
+12、整合zipkin，虽然springboot2.x以后已不推荐自己搭建zipkin服务端，而是用jar包启动，
+本例自己搭建了服务端，但要加management.metrics.web.server.auto-time-requests=false，否则请求报错，
+请求http://localhost:9411/zipkin/  
