@@ -16,6 +16,7 @@
         <module>cloud-zuul-gateway</module>
         <module>cloud-config-server</module>
         <module>cloud-zipkin-server</module>
+        <module>cloud-oauth2</module>
     </modules>
 
     <parent>
