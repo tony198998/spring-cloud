@@ -27,4 +27,11 @@ curl -X POST http://localhost:7788/actuator/bus-refresh，从配置中心拉取�
 请求http://localhost:9411/zipkin/   
 
 
-# 后续，加入鉴权签权模块，docker容器化部署
+# 后续，docker容器化部署
+##步骤：
+1、编写dockerfile  
+2、在宿主目标机上拉取docker  
+3、配置docker镜像中心    
+4、镜像：docker images  运行中的镜像：docker ps    
+5、打镜像包： docker build -t 镜像名 . (docker build -t cloud-eureka .)   
+6、启动镜像： sudo docker run -p 8081:8081[端口映射] 镜像名 (sudo docker run  -p 8100:8100 cloud-eureka)
