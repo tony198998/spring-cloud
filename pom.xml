@@ -17,6 +17,7 @@
         <module>cloud-config-server</module>
         <module>cloud-zipkin-server</module>
         <module>cloud-oauth2</module>
+        <module>sentinel</module>
     </modules>
 
     <parent>

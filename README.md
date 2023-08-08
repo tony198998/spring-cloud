@@ -35,3 +35,27 @@ curl -X POST http://localhost:7788/actuator/bus-refresh，从配置中心拉取�
 4、镜像：docker images  运行中的镜像：docker ps    
 5、打镜像包： docker build -t 镜像名 . (docker build -t cloud-eureka .)   
 6、启动镜像： sudo docker run -p 8081:8081[端口映射] 镜像名 (sudo docker run  -p 8100:8100 cloud-eureka)
+
+##限流：sentinel
+sentinel模块，只需启动sentinel的jar包，打开dashboard界面，
+见resource资源文件下的sentinel的jar包
+pom中引入依赖
+<!--sentinel启动器-->
+<dependency>
+<groupId>com.alibaba.cloud</groupId>
+<artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+<version>2.1.1.RELEASE</version>
+</dependency>
+
+配置文件中
+spring:
+application:
+name: WXL-DEV-SERVICE-2
+cloud:
+sentinel:
+transport:
+dashboard: 127.0.0.1:8858
+
+
+参见文档：
+https://blog.csdn.net/qq_50909707/article/details/123863348

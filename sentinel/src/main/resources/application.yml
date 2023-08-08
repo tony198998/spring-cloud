@@ -1,0 +1,10 @@
+server:
+  port: 8002
+
+spring:
+  application:
+    name: WXL-DEV-SERVICE-2
+  cloud:
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8858
